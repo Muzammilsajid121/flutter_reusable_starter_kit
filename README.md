@@ -91,6 +91,27 @@ graph TD
     style Common fill:#ffd,stroke:#333,stroke-width:2px
 ```
 
+## 📁 Project Architecture
+
+```text
+lib/
+├── main.dart                    # App entry point
+│
+├── feature/                     # Feature modules (Modular Architecture)
+│   ├── auth/                   # Authentication (Login, Signup, OTP)
+│   ├── badges_milestones/      # Achievements & Badge system
+│   └── dashboard/              # Home & Analytics dashboard
+│
+├── apis/                        # Dio helper & API configuration
+├── common/                      # Shared widgets (Buttons, AppBars, Snackbars)
+├── router/                      # GoRouter navigation setup
+└── utils/                       # Core utilities & design system
+    ├── constants/              # Global constants (Colors, Strings, Sizes)
+    ├── helpers/                # Logic helpers & Network managers
+    ├── theme/                  # Material 3 Theme configuration
+    └── validators/             # Form validation logic
+```
+
 ---
 
 ## 🛠 Tech Stack
@@ -149,5 +170,3 @@ The heart of the design system and helper functions.
 Feel free to fork this repository and contribute to making it even better!
 
 ---
-
-*Generated with ❤️ by Antigravity AI*
