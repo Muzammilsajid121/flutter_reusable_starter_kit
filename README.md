@@ -9,7 +9,8 @@ A professional-grade, scalable, and modular Flutter starter kit designed for rap
 - **Networking:** Robust HTTP client using `dio` with interceptors and custom logging.
 - **Design System:** 
   - Comprehensive custom themes (Dark & Light).
-  - Reusable UI components (Buttons, TextFields, AppBars).
+  - Reusable UI components (Buttons, TextFields, AppBars, **Custom Dialogs**).
+  - Pull-to-refresh integration.
   - Responsive layouts (Grid, List).
   - Shimmer effects and Lottie animations.
 - **Authentication:** Integrated Google Sign-In and local authentication flows.
@@ -103,7 +104,12 @@ lib/
 │   └── dashboard/              # Home & Analytics dashboard
 │
 ├── apis/                        # Dio helper & API configuration
-├── common/                      # Shared widgets (Buttons, AppBars, Snackbars)
+├── common/                      # Shared widgets
+│   ├── appbar/                 # Custom app bars
+│   ├── buttons/                # Reusable buttons
+│   ├── dialogs/                # Premium custom dialogs (Success, Confirm, Loading)
+│   ├── refresh/                # Reusable Pull-to-Refresh indicator
+│   └── snackbars/              # Custom snackbar notifications
 ├── router/                      # GoRouter navigation setup
 └── utils/                       # Core utilities & design system
     ├── constants/              # Global constants (Colors, Strings, Sizes)
