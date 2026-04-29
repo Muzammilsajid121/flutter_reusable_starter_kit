@@ -10,7 +10,7 @@ import 'package:flutter_starter_kit/utils/barrel_files/utils_barrel.dart';
 class TAppRouter {
   // Route Names (Constants) takay spelling mistake na ho
   static const String splash = '/splash';
-  static const String onboarding = '/';
+  static const String onboarding = '/'; // tells that this is the initial starting point of app
   static const String login = '/login';
   static const String dashboard = '/dashboard';
   static const String subscription = '/subscription';
