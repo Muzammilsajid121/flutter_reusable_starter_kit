@@ -1,7 +1,6 @@
 //-- Flutter & Packages
 //* replace project name with your by cntl+h to remove import errors
 export 'package:flutter/material.dart';
-// export 'package:get/get.dart';
 export 'package:iconsax/iconsax.dart';
 
 //-- Routing
@@ -26,3 +25,7 @@ export 'package:flutter_starter_kit/utils/shimmer/shimmer_effect.dart';
 
 //--apis
 export 'package:flutter_starter_kit/apis/dio_helper.dart';
+
+
+//-- Local Storage
+export 'package:flutter_starter_kit/utils/local_storage/storage_utility.dart';
