@@ -25,6 +25,7 @@ class MyApp extends StatelessWidget {
           return MaterialApp.router(
             title: 'STARTER KIT BY MUZAMMIL',
             debugShowCheckedModeBanner: false,
+            debugShowMaterialGrid: false,
             themeMode: themeMode,
             theme: TAppTheme.lightTheme,
             darkTheme: TAppTheme.darkTheme,

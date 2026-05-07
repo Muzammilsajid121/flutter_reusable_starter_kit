@@ -5,12 +5,17 @@ import 'package:flutter_starter_kit/feature/auth/presentation/login/login_screen
 import 'package:flutter_starter_kit/feature/auth/presentation/otp_verify/otp_verify_screen.dart';
 import 'package:flutter_starter_kit/feature/badges_milestones/presentation/badges_milestone_screen.dart';
 import 'package:flutter_starter_kit/feature/dashboard/presentation/dashboard_screen.dart';
+import 'package:flutter_starter_kit/appCheckScreens/app_check_screen.dart';
+import 'package:flutter_starter_kit/appCheckScreens/widgets_gallery_screen.dart';
+import 'package:flutter_starter_kit/appCheckScreens/dialog_snackbar_screen.dart';
+import 'package:flutter_starter_kit/appCheckScreens/shimmer_loader_screen.dart';
 import 'package:flutter_starter_kit/utils/barrel_files/utils_barrel.dart';
 
 class TAppRouter {
   // Route Names (Constants) takay spelling mistake na ho
+  static const String appCheck = '/';
   static const String splash = '/splash';
-  static const String onboarding = '/'; // tells that this is the initial starting point of app
+  // static const String onboarding = '/'; // tells that this is the initial starting point of app
   static const String login = '/login';
   static const String dashboard = '/dashboard';
   static const String subscription = '/subscription';
@@ -30,9 +35,12 @@ class TAppRouter {
   static const String analyticscreen = '/AnalyticsScreen';
   static const String userInputscreen = '/userInputscreen';
   static const String aiReponseScreen = '/aiReponseScreen';
+  static const String widgetGallery = '/widgetGallery';
+  static const String dialogSnackbar = '/dialogSnackbar';
+  static const String shimmerLoader = '/shimmerLoader';
 
   static final GoRouter router = GoRouter(
-    initialLocation: splash,
+    initialLocation: appCheck,
     debugLogDiagnostics: true, // Console mein routing logs dekhne ke liye
     routes: [
       // Login Route
@@ -82,11 +90,32 @@ class TAppRouter {
       ),
 
 
-      // Badges Milestone Screen Route
       GoRoute(
         path: badgesMilestone,
         name: 'badgesMilestone',
         builder: (context, state) => const BadgesMilestoneScreen(),
+      ),
+
+      // App Check Screen Route
+      GoRoute(
+        path: appCheck,
+        name: 'appCheck',
+        builder: (context, state) => const AppCheckScreen(),
+      ),
+      GoRoute(
+        path: widgetGallery,
+        name: 'widgetGallery',
+        builder: (context, state) => const WidgetsGalleryScreen(),
+      ),
+      GoRoute(
+        path: dialogSnackbar,
+        name: 'dialogSnackbar',
+        builder: (context, state) => const DialogSnackbarScreen(),
+      ),
+      GoRoute(
+        path: shimmerLoader,
+        name: 'shimmerLoader',
+        builder: (context, state) => const ShimmerLoaderScreen(),
       ),
       
     ],

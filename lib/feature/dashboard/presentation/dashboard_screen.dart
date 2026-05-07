@@ -56,6 +56,8 @@ class _DashboardScreenState extends State<DashboardScreen> {
               context.push(TAppRouter.setting);
             } else if (value == 'badges') {
               context.push(TAppRouter.badgesMilestone);
+            } else if (value == 'appCheck') {
+              context.push(TAppRouter.appCheck);
             }
           },
           itemBuilder: (context) => [
@@ -96,6 +98,16 @@ class _DashboardScreenState extends State<DashboardScreen> {
                   Icon(Icons.emoji_events_outlined, color: TColors.black),
                   SizedBox(width: 12),
                   Text('Badges & Milestones'),
+                ],
+              ),
+            ),
+            const PopupMenuItem(
+              value: 'appCheck',
+              child: Row(
+                children: [
+                  Icon(Icons.widgets_outlined, color: TColors.black),
+                  SizedBox(width: 12),
+                  Text('App Check (UI Kit)'),
                 ],
               ),
             ),

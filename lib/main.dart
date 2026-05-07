@@ -3,10 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_starter_kit/utils/constants/colors.dart';
 import 'package:flutter_starter_kit/utils/local_storage/storage_utility.dart';
-import 'package:shimmer/main.dart';
+import 'package:flutter_starter_kit/my_app.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
+  print('--- APP STARTED FROM MAIN.DART ---');
 
   //-- Initialize Local Storage
   await TLocalStorage.init();
